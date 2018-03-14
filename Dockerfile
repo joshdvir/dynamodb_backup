@@ -4,6 +4,7 @@ MAINTAINER Josh Dvir <josh@dvir.us>
 ENV INTERVAL_IN_HOURS=12
 
 RUN apk add --update --no-cache \
+    bash \
     curl \
     less \
     python \
