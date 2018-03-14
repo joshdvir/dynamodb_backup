@@ -8,7 +8,7 @@ RUN apk add --update --no-cache \
     less \
     python \
     py-pip \
-    pip install --upgrade pip awscli
+    && pip install --upgrade pip awscli
 
 ADD https://bin.equinox.io/c/ekMN3bCZFUn/forego-stable-linux-amd64.tgz /forego.tgz
 RUN cd /usr/local/bin && tar xfz /forego.tgz && chmod +x /usr/local/bin/forego && rm /forego.tgz
