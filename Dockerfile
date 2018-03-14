@@ -19,7 +19,7 @@ WORKDIR /opt
 RUN echo $'#!/bin/bash\n\
 \n\
 while true; do\n\
-  aws dynamodb create-backup --table-name $TABLE_NAME/ --backup-name $TABLE_NAME-$(cat /proc/sys/kernel/random/uuid) \n\
+  aws dynamodb create-backup --table-name $TABLE_NAME --backup-name $TABLE_NAME-$(cat /proc/sys/kernel/random/uuid) \n\
   sleep $(( 60*60*INTERVAL_IN_HOURS ))\n\
 done' > backup_dynamodb.sh && chmod +x backup_dynamodb.sh
 
